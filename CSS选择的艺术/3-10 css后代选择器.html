@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-10 css后代选择器</title>
+	<!--给每个em标签添加不同的样式，不可能在每个标签内添加class属性-->
+	<!--包含关系中跨越了一层或者多层，称两者关系为祖先或者后代-->
+	<style>
+		p em { /*后代选择器 之间用空格隔开*/
+			color: red;
+		}
+
+		h1.special em {
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<p><em>CSS使用方法</em></p>
+	<h1 class="special"><em>CSS使用方法</em></h1>
+	<ol type="1">
+		<li>行内样式（内联样式） 在开始标签内添加style样式属性</li>
+		<li>内部样式表（嵌入样式）</li>
+		<li>外部样式表</li>
+		<li>导入式</li>
+	</ol>
+</div>
+<div>
+	<h1><em>CSS选择器</em></h1>
+	<ul>
+		<li>标签选择器</li>
+		<li>类选择器</li>
+		<li>ID选择器</li>
+		<li>全局选择器</li>
+		<li>后代选择器</li>
+	</ul>
+</div>
+</body>
+</html>

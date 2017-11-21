@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-8 background-attachment</title>
+	<style type="text/css">
+		/*background-attachment:scoll | fixed*/
+		/*
+		scroll:默认值，背景图片随滚动条滚动
+		fixed:当页面的其余部分滚动时，背景图片不会移动*/
+		.one {
+			width: 300px;
+			height: 1500px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			border: 2px solid red;
+			background-attachment: fixed;
+			float: left;
+		}
+
+		.two {
+			width: 300px;
+			height: 1500px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			border: 2px solid red;
+			background-attachment: scroll;
+			float: left;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="one">1</div>
+<div class="two">2</div>
+</body>
+</html>

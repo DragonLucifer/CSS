@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-8 清除浮动的四种解决办法</title>
+	<style>
+		/*
+		浮动副作用的解决
+			1.手动给父元素添加高度
+			2.通过clear清除内部和外部浮动
+			3.给父元素添加overflow实行并结合zoom：1使用
+			4.给父元素添加浮动(弊端---附近元素异常）*/
+		.one {
+			width: 500px;
+			height: 32px; /*方法一：手动给父元素添加高度 弊端：元素数量增多时无法控高度*/
+			border: 1px solid #000;
+		}
+
+		.test1 {
+			width: 100px;
+			height: 30px;
+			background-color: red;
+			border: 1px solid #FFF;
+			float: left;
+		}
+
+		/*方法二*/
+		/*
+		clear属性
+			clear：none | left | right | both
+		left	在左侧不允许浮动元素。
+		right	在右侧不允许浮动元素。
+		both	在左右两侧均不允许浮动元素。
+		none	默认值。允许浮动元素出现在两侧。
+		inherit	规定应该从父元素继承 clear 属性的值。*/
+		.two {
+			width: 200px;
+			height: 400px;
+			border: 1px solid #CCCCCC;
+		}
+
+		.test2 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+		}
+
+		.test3 {
+			width: 120px;
+			height: 120px;
+			background-color: blue;
+			clear: left; /*清楚左浮动*/
+			overflow: hidden; /*解决父元素塌陷 溢出问题（截断处理---弊端）*/
+			zoom: 1; /*IE专用属性*/
+		}
+
+		/*方法三*/
+		.three {
+			width: 500px;
+			height: auto;
+			border: 1px solid #000;
+
+		}
+
+		.test4 {
+			width: 100px;
+			height: 30px;
+			background-color: red;
+			border: 1px solid #FFF;
+			float: left;
+		}
+
+		/*方法四*/
+		.four {
+			width: 500px;
+			height: auto;
+			border: 1px solid #000;
+			float: left;
+		}
+
+		.test5 {
+			width: 100px;
+			height: 30px;
+			background-color: red;
+			border: 1px solid #FFF;
+			float: left;
+		}
+
+		.bro{
+			width: 100px;
+			height: 100px;
+			background-color: blue;/*此方法可以解决塌陷问题，但是附近的元素受到影响，被上一层元素覆盖*/
+			clear: left;/*解决被其他元素覆盖方法*/
+		}
+	</style>
+</head>
+<body>
+<div class="one">
+	<div class="test1"></div>
+	<div class="test1"></div>
+	<div class="test1"></div>
+</div>
+<div>
+	<img src="img/float.png"/>
+</div>
+<div class="two">
+	<div class="test2"></div>
+	<div class="test3"></div>
+</div>
+<div class="three">
+	<div class="test4"></div>
+	<div class="test4"></div>
+	<div class="test4"></div>
+</div>
+<div class="four">
+	<div class="test5"></div>
+	<div class="test5"></div>
+	<div class="test5"></div>
+</div>
+<div class="bro"></div><!--给父元素添加浮动(弊端-&#45;&#45;附近元素异常）-->
+</body>
+</html>

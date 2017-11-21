@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #07cbc9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:3;
+}
+
+.header img {
+    width: 260px;
+    height: 48px;
+    padding-left: 100px;
+    padding-top: 2px;
+}
+
+.header .logo {
+    float: left;
+}
+
+.header .nav {
+    float: right;
+}
+
+.header .nav ul {
+    padding-right: 200px;
+
+}
+
+.header .nav ul li {
+    float: left;
+    list-style: none;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header .nav ul li:hover {
+    background-color: black;
+}
+.header .nav ul li a{
+    text-decoration: none;
+}
+.header .nav ul li a:link{
+    color: white;
+}
+
+.header .nav ul li a:visited{
+    background-color: black;
+    color: white;
+}
+.header .nav ul li a:hover{
+    background-color: black;
+    color: white;
+}
+.header .nav ul li a:active{
+    background-color: black;
+    color: white;
+}
+.header .clear {
+    clear: both;
+}
+
+.main .top {
+    width: 100%;
+    height: 600px;
+    padding-top: -20px;
+}
+
+.main .top img {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: -4px;
+}
+
+.main .topLayer {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 545px;
+    opacity: 0.5; /*透明度*/
+}
+
+.main .topLayer-top {
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    z-index: 2;
+    margin-left: -250px;
+}
+
+.main .topLayer-top input {
+    width: 500px;
+    height: 30px;
+    font-size: 16px;
+    background-color: inherit;
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid #ebebeb;
+    font-family: 微软雅黑;
+}
+
+.main .topLayer-top textarea {
+    width: 500px;
+    height: 100px;
+    font-size: 16px;
+    background-color: inherit;
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid #ebebeb;
+    font-family: 微软雅黑;
+}
+
+.main .topLayer-top button {
+    width: 120px;
+    height: 40px;
+    background-color: inherit;
+    color: #9b9b9b;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: 0;
+    left: 200px;
+}
+
+.main .middle .m-top .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 黑体;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.main .middle .m-top .line {
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    background-color: #07cbc9;
+    border: none;
+}
+
+.main .middle .m-top .comm {
+    text-align: center;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    padding-top: 15px;
+    line-height: 24px;
+}
+
+.main .middle .m-bottom {
+    width: 100%;
+    float: left;
+}
+
+.main .middle .m-bottom .m-left {
+    float: left;
+    width: 33.3%;
+    height: 300px;
+}
+
+.main .middle .m-bottom .m-left .title {
+    padding-left: 450px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.main .middle .m-bottom .m-left .m-left-content {
+    /*float:right;*/
+    width: 280px;
+    height: 220px;
+    border: 1px solid #bfbfbf;
+    position: relative;
+    top: 20px;
+    left: 430px;
+    word-break: break-all;
+    padding-left: 20px;
+}
+
+.main .middle .m-bottom .m-center {
+    float: left;
+    text-align: center;
+}
+
+.main .middle .m-bottom .m-center img {
+    width: 650px;
+    height: 435px;
+    padding-top: 20px;
+}
+
+.main .middle .m-bottom .m-left .m-middle-button {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: -22px;
+    left: 450px;
+    z-index: 2;
+}
+
+.main .middle .m-bottom .m-left .m-middle-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.main .middle .m-bottom .m-left .layer {
+    position: relative;
+    top: -241px;
+    left: 431px;
+    background-color: white;
+    width: 300px;
+    height: 220px;
+    opacity: 0.2; /*透明度*/
+}
+
+.main .middle .m-bottom .m-right {
+    float: left;
+    width: 300px;
+    height: 435px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.main .middle .m-bottom .m-right .m-top .m-top-content {
+    float: left;
+    width: 300px;
+    height: 150px;
+    margin-top: 10px;
+    border: 2px solid #00ffff;
+}
+
+.main .middle .m-bottom .m-right .m-bottom .m-bottom-content {
+    float: left;
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    border: 2px solid #00ffff;
+}
+
+.main .middle .m-bottom .m-right .m-top .m-top-content .num1 {
+    font-size: 24px;
+    text-align: center;
+    font-family: 微软雅黑;
+    padding-top: 27px;
+    font-weight: bold;
+}
+
+.main .middle .m-bottom .m-right .m-top .m-top-content .line {
+    width: 20px;
+    height: 2px;
+    position: relative;
+    left: 152px;
+    top: 10px;
+    background-color: #07cbc9;
+    border: none;
+}
+
+.main .middle .m-bottom .m-right .m-top .m-top-content .role1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 微软雅黑;
+    padding-top: 30px;
+}
+
+.main .middle .m-bottom .m-right .m-bottom .m-bottom-content .num2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: 微软雅黑;
+    padding-top: 27px;
+    font-weight: bold;
+}
+
+.main .middle .m-bottom .m-right .m-bottom .m-bottom-content .line {
+    width: 20px;
+    height: 2px;
+    position: relative;
+    left: 140px;
+    top: 10px;
+    background-color: #07cbc9;
+    border: none;
+}
+
+.main .middle .m-bottom .m-right .m-bottom .m-bottom-content .role2 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 微软雅黑;
+    padding-top: 30px;
+}
+
+.main .middle .clear {
+    clear: both;
+}
+
+.main .bottom .top {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.main .bottom .top .img1 img {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.main .bottom .top .word1 {
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-color: #07cbc9;
+    margin-top: -4px;
+}
+
+.main .bottom .top .word1 .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: white;
+}
+
+.main .bottom .top .word1 .content1 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .top .word1 .content2 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .top .word1 .b1 {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: -15px;
+    left: 50%;
+    text-align: center;
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.main .bottom .top .word1 .b1:hover {
+    background-color: inherit;
+    border: 1px solid black;
+    color: white;
+}
+
+.main .bottom .top .img2 img {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.main .bottom .top .word2 {
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-color: #07cbc9;
+    margin-top: -4px;
+}
+
+.main .bottom .top .word2 .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: white;
+}
+
+.main .bottom .top .word2 .content1 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .top .word2 .content2 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .top .word2 .b2 {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: -15px;
+    left: 50%;
+    text-align: center;
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.main .bottom .top .word2 .b2:hover {
+    background-color: inherit;
+    border: 1px solid black;
+    color: white;
+}
+
+.main .bottom .bottom {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.main .bottom .bottom .img1 img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-top: -4px;
+}
+
+.main .bottom .bottom .word1 {
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-color: #07cbc9;
+    margin-top: -4px;
+}
+
+.main .bottom .bottom .word1 .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: white;
+}
+
+.main .bottom .bottom .word1 .content1 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .bottom .word1 .content2 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .bottom .word1 .b1 {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: -15px;
+    left: 50%;
+    text-align: center;
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.main .bottom .bottom .word1 .b1:hover {
+    background-color: inherit;
+    border: 1px solid black;
+    color: white;
+}
+
+.main .bottom .bottom .img2 img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-top: -4px;
+}
+
+.main .bottom .bottom .word2 {
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-color: #07cbc9;
+    margin-top: -4px;
+}
+
+.main .bottom .bottom .word2 .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: white;
+}
+
+.main .bottom .bottom .word2 .content1 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .bottom .word2 .content2 {
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-left: 15px;
+    word-break: keep-all;
+    color: white;
+}
+
+.main .bottom .bottom .word2 .b2 {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: -15px;
+    left: 50%;
+    text-align: center;
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.main .bottom .bottom .word2 .b2:hover {
+    background-color: inherit;
+    border: 1px solid black;
+    color: white;
+}
+
+.main .gallery .word .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 黑体;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.main .gallery .word .line {
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    background-color: #07cbc9;
+    border: none;
+}
+
+.main .gallery .word .comm {
+    text-align: center;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    padding-top: 15px;
+    line-height: 24px;
+}
+
+.main .gallery .pictures {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.main .gallery .pictures .pic-one {
+    width: 360px;
+    height: 280px;
+    float: left;
+    background-color: black;
+    margin-left: 30px;
+    color: white;
+    text-align: center;
+}
+
+.main .gallery .pictures .pic-two {
+    width: 360px;
+    height: 280px;
+    float: left;
+    background-color: black;
+    margin-left: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: #07cbc9;
+    color: white;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    text-align: center;
+    line-height: 50px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-13 伪类选择器</title>
+	<style>
+		/*
+			重要!!!：:link>:visited>:hover>:active
+			说明：
+				1.a:hover必须置于a:link和a:visited之后才有效
+				2.a:active必须置于a:hover之后才有效
+				3.伪类名称对大小写不敏感
+			*/
+		/*a:link {
+			color: blue;
+		}
+
+		a:visited {
+			color: gray;
+		}
+
+		a:hover {
+			color: green;
+		}
+
+		a:active {
+			color: orange;
+		}*/
+
+		a.one:link {
+			color: blue;
+		}
+
+		a.one:visited {
+			color: green;
+		}
+
+		a.one:hover {
+			color: red;
+		}
+
+		a.one:active {
+			color: gray;
+		}
+
+		a.two:link {
+			color: green;
+		}
+
+		a.two:visited {
+			color: blue;
+		}
+
+		a.two:hover {
+			color: gray;
+		}
+
+		a.two:active {
+			color: red;
+		}
+
+		p a:link {
+			color: blue;
+		}
+
+		p a:visited {
+			color: green;
+		}
+
+		p a:hover {
+			color: red;
+		}
+
+		p a:active {
+			color: gray;
+		}
+
+		p:hover {
+			color: red;
+		}
+
+		p:active {
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+<!--
+	伪类选择器定义特殊状态下的样式
+	无法用标签、id、class及其他属性实现-->
+
+<!--
+	链接伪类
+		链接状态：激活、已访问、未访问、鼠标悬停-->
+<!--
+	伪类说明：
+		:link 未访问链接
+		:visited 已访问链接
+		:hover 鼠标悬停状态
+		:active 激活链接-->
+<a href="https://www.imooc.com" target="_blank" class="one">CSS使用方法</a>
+<br/>
+<a href="https://coding.imooc.com" target="_blank" class="two">CSS选择器</a>
+
+<p><a href="https://www.imooc.com" target="_blank">CSS使用方法</a></p>
+<div><a href="https://coding.imooc.com" target="_blank">CSS选择器</a></div>
+<!--
+	:hover 用于访问的鼠标经过某个元素时
+	:active 用于一个元素被激活时（即按下鼠标之后放开鼠标之前的时间）-->
+<p>慕课网</p>
+</body>
+</html>

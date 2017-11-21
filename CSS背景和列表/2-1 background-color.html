@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 background-color</title>
+	<style type="text/css">
+		/*background-color:颜色 | transparent*/
+		/*transparent是全透明黑色（black）的速记法，类似于rgba(0,0,0,0)*/
+		/*背景区包括内容、内边距(padding)和边框、不包含外边距(margin)*/
+		div {
+			width: 300px;
+			height: 300px;
+			background-color: transparent; /*transparent---透明色*/
+			/*red、rgb(255,0,0)*/
+			padding: 20px; /*背景包含内边距*/
+			margin: 20px; /*背景不包含外边距*/
+			border: 20px dashed; /*背景包含边框*/ /*注意：边框颜色默认为文本颜色*/
+		}
+	</style>
+</head>
+<body>
+<div>background-color</div>
+</body>
+</html>

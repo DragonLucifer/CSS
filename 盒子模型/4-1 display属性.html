@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-1 display属性</title>
+	<style>
+		/*
+		display属性：
+			inline:元素将显示为内联元素，元素前后没有换行符
+			block:元素将显示为块级元素，元素前后会带有换行符*/
+		div, span {
+			background-color: #00aaee;
+			border: 1px #666 solid;
+		}
+
+		div {
+			display: inline;
+			font-size: 16px;
+			width: 100px; /*无效 当前变为行内元素*/
+			height: 300px; /*无效 当前变为行内元素*/
+			padding: 5px;
+			margin: 10px;
+		}
+
+		/*重要：
+		1.相应内联元素及使用display：inline设置成内联元素的元素width与height属性无效；水平方向margin-left/margin-right/padding-left/padding-right有效；
+		  垂直方向margin-top/margin-bottom/padding-top/padding-bottom.
+		2.块级元素及使用display:block设置成块级元素的元素width/height/margin/padding属性都有效
+		*/
+		span {
+			display: block;
+			width: 100px;
+			height: 300px;
+			padding: 5px;
+			margin: 10px;
+		}
+
+		.one {
+			font-size: 0; /*用于解决块级元素变为行内元素时产生的间隙*/
+		}
+
+		/*
+		display属性
+			inline-block:行内块元素，元素呈现为inline，具有block相应特性
+			none：此元素不会被显示!!!*/
+
+		.two {
+			display: inline-block;
+			font-size: 16px;
+			width: 100px;
+			height: 300px;
+			padding: 5px;
+			margin: 10px;
+		}
+
+		.three {
+			display: none;
+		}
+
+		a:hover p {
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+<div class="one">
+	<div>display属性---div</div>
+	<div>display属性---div</div>
+	<div>display属性---div</div>
+</div>
+<hr/>
+<!--内联元素之间由于换行书写存在缝隙 解决方法：在一行书写-->
+<span>dispaly属性---span</span><span>dispaly属性---span</span><span>dispaly属性---span</span>
+<hr/>
+<div class="two">display属性---div</div>
+<hr/>
+<a href="#">这里<p class="three">display属性---div</p></a>
+</body>
+</html>

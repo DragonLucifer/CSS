@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-4 双飞翼布局及案例</title>
+	<style>
+		/*
+		双飞翼布局
+			对圣杯布局改良---得出双飞翼布局
+			去掉相对布局，只需要浮动和父边距*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-width: 700px;
+		}
+
+		.head,
+		.footer {
+			float: left;
+			width: 100%;
+			border: 1px solid #333;
+			background: #ddd;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		.sub,
+		.main,
+		.extra {
+			float: left;
+			min-height: 300px;
+		}
+
+		.main {
+			width: 100%;
+		}
+
+		.main-inner {
+			margin-left: 200px;
+			margin-right: 220px;
+			background: #30a457;
+			min-height: 300px;
+			/*word-break: break-all;*/
+		}
+
+		.sub {
+			margin-left: -100%; /*导致上移至最左侧*/
+			width: 200px;
+			background: #f00;
+		}
+
+		.extra {
+			margin-left: -220px;
+			width: 220px;
+			background: #1a5acd;
+		}
+	</style>
+</head>
+<body>
+<div class="head">
+	<h4>Header</h4>
+</div>
+<div class="main">
+	<div class="main-inner">
+		<h4>main</h4>
+		<p>这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容
+			这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容这是页面的中间内容</p>
+	</div>
+</div>
+<div class="sub">
+	<h4>sub</h4>
+	<p>这是页面的左侧</p>
+</div>
+<div class="extra">
+	<h4>extra</h4>
+	<p>这是页面的右侧</p>
+</div>
+<div class="footer">
+	<h4>footer</h4>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-6 position-absolute(1)</title>
+	<style>
+		/*
+		position---absolute
+		作用：使元素脱离常规流
+		特点：
+			1.脱离常规流
+			2.设置尺寸时可以设置百分比，此时百分比相对于最近定位祖先元素而言
+			3.lrtb设置为0,他将对齐到最近定位祖先元素的各边---衍生出居中对齐的方式；lrtb设置为auto时，他将恢复常规流
+			4.如果没有最近定位元素，会将body标签看做祖先元素
+			5.z-index可以控制堆叠顺序
+		      z-indew的值：
+			 	auto：默认，堆叠顺序与父元素相等
+				number：设置元素的堆叠顺序*/
+		.block {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			border: 2px solid black;
+			text-align: center;
+		}
+
+		.block:nth-child(1){
+			position: absolute;
+			border-color: blue;
+			top: 20px;
+			left: 20px;
+			z-index: 999999;
+		}
+		.block:nth-child(2){
+			position: absolute;/*脱离常规流,原有的空间安排其他元素，不再为本元素预留空间*/
+			border-color: red;
+			width:50%;/*相对于最近定位祖先元素*/
+			top: 20px;
+			left: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="block">A</div>
+<div class="block">B</div>
+<div class="block">C</div>
+</body>
+</html>

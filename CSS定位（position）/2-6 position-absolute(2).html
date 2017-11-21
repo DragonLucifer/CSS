@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-6 position-absolute(2)</title>
+	<style>
+		.parent {
+			position: relative;
+			width: 200px;
+			height: 150px;
+			background-color: blue;
+		}
+
+		.child {
+			position: absolute;/*任何元素都可以设置为relative，他的绝对定位的后代可以相对于它进行绝对定位*/
+			right: 0;
+			top: 0;
+			width: 80px;
+			height: 80px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	<div class="child">
+
+	</div>
+</div>
+</body>
+</html>

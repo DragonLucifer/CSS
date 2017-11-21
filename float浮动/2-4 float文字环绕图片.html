@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-4 float文字环绕图片</title>
+	<style type="text/css">
+		.content {
+			width: 600px;
+			height: 600px;
+			border: 1px solid #CCCCCC;
+		}
+
+		img {
+			float: right;
+		}
+
+		.test {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;/*设置浮动属性重新安排文档流，此时设置宽度和高度有效*/
+		}
+
+		.content1 {
+			width: 300px;
+			height: 300px;
+			border: 1px solid #CCCCCC;
+		}
+	</style>
+</head>
+<body>
+<div class="content">
+	<img src="img/css3.jpg" width="360">
+	慕课网是垂直的互联网IT技能免费学习网站。以独家 视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术。
+	慕课网课程涵盖 前端开发、 PHP、Html5、Android、
+	iOS、Swift等IT前沿技术语言，包括基础课程、实用案例、高级分享三大类型，适合不同阶段的学习人群。以纯干货、短视频的形式为平台特点，为在校学生、职场白领提供了一个迅速提升技能、共同分享进步的学习平台。
+</div>
+<hr/>
+<span class="test"></span><!--本身为内联元素，无法设置宽度和高度-->
+<hr/>
+<br/><br/><br/><br/><br/>
+<div class="content1">
+	<span class="test"></span>
+	慕课网是垂直的互联网IT技能免费学习网站。以独家 视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术。
+	慕课网课程涵盖 前端开发、 PHP、Html5、Android、慕课网是垂直的互联网IT技能免费学习网站。以独家 视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术。
+	慕课网课程涵盖 前端开发、 PHP、Html5、Android、
+</div>
+</body>
+</html>

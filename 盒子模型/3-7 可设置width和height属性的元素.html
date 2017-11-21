@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-7 可设置width和height属性的元素</title>
+	<style type="text/css">
+		p {
+			background-color: #ececec;
+			width: 200px; /*width未设置值时等价于auto（根据标签设置width 如p标签为块级元素宽度则占整个页面）*/
+			height: 100px; /*height未设置值时根据内容显示高度*/
+		}
+
+		span {
+			background-color: #acacac;
+			width: 200px; /*无效果*/
+			height: 100px; /*无效果*/
+		}
+
+		/*
+		可以设置高和宽属性的HTML元素
+			1.块级元素
+			  p、div、h1~h6、ul、li、ol、dl、dt、dd
+			2.替换元素
+			  浏览器根据其标签的元素与属性来判断显示的具体内容如image、input（根据type属性替换内容）、textarea*/
+
+		img { /*css样式优先于行内样式 即图片同时设置css样式和标签内的属性最终按照css样式显示*/
+			width: 200px;
+			height: 100px;
+		}
+
+		/*重要：width与height属性设置是内容的高和宽*/
+	</style>
+</head>
+<body>
+<p>盒子模型高度height 宽度width</p>
+<span>盒子模型高度height 宽度width</span>
+<img src="img/盒子模型.png"><img src="img/盒子模型.png">
+<img src="img/盒子模型.png" width="500px" height="500px"><img src="img/盒子模型.png">
+</body>
+</html>

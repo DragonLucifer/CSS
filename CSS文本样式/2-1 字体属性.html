@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 字体属性</title>
+	<style>
+		h1 {
+			font-family: "Times New Roman";
+		}
+
+		/*尽量使用系统常规字体*/
+		p { /*设置多个字体，浏览器依次查找，如果都没有，使用浏览器默认样式*/
+			font-family: "微软雅黑", "宋体", "黑体", sans-serif; /*从左至右依次在浏览器查看是否有效，若有效则适用当前字体否则向后寻找至有效字体（最终使用浏览器默认字体）*/
+		}
+	</style>
+</head>
+<body>
+<!--字体集包含多种字体-->
+<h1 style="font-family: '隶书'">CSS层叠样式表</h1>
+<p>CSS层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
+	CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
+</body>
+</html>

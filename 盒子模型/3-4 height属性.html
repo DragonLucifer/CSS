@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-4 height属性</title>
+	<style type="text/css">
+		/*
+		高度属性
+			高度		height：长度值（in、em等）｜ 百分比 ｜ auto
+			最大高度	max-height：长度值（in、em等）｜ 百分比 ｜ auto 存在兼容性问题
+			最小高度 min-height：长度值（in、em等）｜ 百分比 ｜ auto 存在兼容性问题*/
+		/*说明：设置块级元素和替换元素的内容高度*/
+		p {
+			background-color: #ececec;
+			height: 200px;
+			float: left;
+		}
+
+		.one {
+			max-height: 100px;
+		}
+
+		.two {
+			min-height: 100px;
+		}
+
+		.three { /*重要!!!：如果一个元素同时设置max-height和min-height属性,并且max-height值小于min-height值，显示效果是显示min-height值*/
+			min-height: 300px;
+			max-height: 100px;
+		}
+
+		.four { /*显示为200px*/
+			min-height: 100px;
+			max-height: 300px;
+		}
+	</style>
+</head>
+<body>
+<p>盒子模型的高度height</p>
+<p class="one">盒子模型的最大高度max-height</p>
+<p class="two">盒子模型的最小高度min-height</p>
+<p class="three">盒子模型的最大最小高度</p>
+<p class="four">盒子模型的最大最小高度</p>
+</body>
+</html>

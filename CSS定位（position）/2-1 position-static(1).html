@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 position-static</title>
+	<style>
+		body, p, img {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*
+		CSS position属性
+			static | relative | absolute | fixed | sticky | inherit
+			top | left |　right | bottom | z-index*/
+
+		/*
+		position---static
+		静态定位/常规定位/自然定位
+		作用：使元素定位于常规/自然流中（块、行垂直排列下去；行内水平从左到右）
+		特点：
+			1.忽略top，bottom，left，right或者z-index声明
+			2.两个相邻的元素如果都设置了外边距，那么最终外边距=两者外边距中最大的
+			3.具有固定width和height值的元素，如果把左右外边距设置为auto，则左右外边距会自动扩大沾满舍与宽度，效果为水平居中*/
+		.block1 {
+			position: static;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			border: 2px solid blue;
+			box-sizing: border-box;/*通过从已经设定的高度和宽度中分别减去边框和内边距之后得到的值，才是内容的宽度和高度*/
+		}
+	</style>
+</head>
+<body>
+<div class="block1">A</div><!--块级元素-->
+<div class="block1">B</div>
+<p>
+	<span>lan</span><a href="#">Mooc</a>
+</p>
+<div class="block1">C</div>
+<hr>
+
+</body>
+</html>

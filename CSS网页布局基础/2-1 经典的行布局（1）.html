@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 经典的行布局（1）</title>
+	<style>
+		/*
+		经典的行布局
+			1.基础的行布局
+			2.行布局自适应
+			3.行布局自适应限制最大宽
+			4.行布局垂直水平居中*/
+		body {
+			margin: 0;
+			padding: 0;
+			color: #FFF;
+			text-align: center;
+		}
+
+		.container1 {
+			width: 800px;
+			height: 200px;
+			background-color: #4c77F2;
+			margin: 0 auto;
+		}
+
+		.container2 {
+			width: 100%;/*用百分比自适应*/
+			height: 200px;
+			background-color: #4c77F2;
+			margin: 0 auto;
+		}
+
+		.container3 {
+			width: 90%;
+			max-width: 1000px;
+			height: 200px;
+			background-color: #4c77F2;
+			margin: 0 auto;
+		}
+
+		.container4 {
+			width: 800px;
+			height: 200px;
+			background-color: blue;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -100px;
+			margin-left: -400px;
+		}
+	</style>
+</head>
+<body>
+<!--行布局-->
+<div class="container1">
+	这是页面内容
+</div>
+<hr/>
+<!--行布局自适应-->
+<div class="container2">
+	这是页面内容
+</div>
+<hr/>
+<!--行布局自适应限制最大宽-->
+<div class="container3">
+	这是页面内容
+</div>
+<hr>
+<!--行布局垂直水平居中-->
+<div class="container4">
+	这是页面内容
+</div>
+</body>
+</html>

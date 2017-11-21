@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-1 CSS继承和层叠</title>
+	<style type="text/css">
+		p {
+			color: red;
+		}
+
+		div {
+			font-size: 50px;
+			border: 1px solid red; /*div标签内的p标签没有继承父元素border属性 重要!!!：不是所有的属性子元素都会继承父元素的*/
+		}
+
+		/*table继承body属性时注意浏览器版本*/
+		body, table {
+			font-size: 100px;
+			border: solid red;
+		}
+
+		h1 {
+			/*
+				CSS层叠
+					样式不冲突时多个样式层叠为一个样式---就近原则
+					样式冲突时按照不同样式的规则优先级来应用样式*/
+			color: red;
+			color: blue;
+
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+
+<!--若想修改<div>里面内容的样式 只需把父元素div进行设置即可-->
+<div><!--修改此处-->
+	<p><span>CSS继承</span></p> <!--span从p标签继承样式-->
+	<div>CSS层叠</div>
+</div>
+<!--父元素设置样式，子元素可以继承部分属性-->
+
+<p>CSS继承和层叠</p>
+<table border="1">
+	<tr>
+		<td>CSS继承</td>
+		<td>CSS层叠</td>
+	</tr>
+</table>
+<h1>CSS</h1><!--默认2em 比标准字体大两倍 body定义字体为100px 此时h1字体为200px-->
+</body>
+</html>

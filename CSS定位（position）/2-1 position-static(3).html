@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 position-static(3).html</title>
+	<style>
+		.block {
+			position: relative;
+			top: 10px;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			border: 2px solid blue;
+			box-sizing: border-box;
+		}
+
+		.block:nth-child(1) {
+			border: 2px solid green;
+			margin: 10px;
+		}
+
+		.block:nth-child(2) {
+			border: 2px solid red;
+			margin: 20px; /*重要：两个相邻的元素如果都设置了外边距，那么最终外边距=两者外边距中最大的*/
+		}
+
+		.block:nth-child(3) {
+			border: 2px solid pink;
+			margin-left: auto;
+			margin-right: auto;/*具有固定width和height值的元素，如果把左右外边距设置为auto，则左右外边距会自动扩大沾满舍与宽度，效果为水平居中*/
+		}
+	</style>
+</head>
+<body>
+<div class="block">A</div>
+<div class="block">B</div>
+<div class="block">C</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-1 css文本样式应用</title>
+	<style type="text/css">
+		p {
+			width: 100%;
+			height: 150px;
+			background-color: #ececec;
+			line-height: 150px; /*单行文字垂直居中，只需将行高==（标签）文字高度*/
+			text-align: center;
+		}
+
+		.one {
+			color: red;
+			font-size: 80px;
+			font-weight: bold;
+		}
+
+		.two {
+			color: gray;
+			font-size: 40px;
+			text-decoration: underline;
+			letter-spacing: 15px;
+			vertical-align: 15px;
+		}
+
+		.three {
+			font-size: 80px;
+			color: gray;
+			font-style: oblique;
+		}
+
+		/*经验技巧：网页制作从整体到局部 借助手册和网络*/
+	</style>
+</head>
+<body>
+<p><span class="one">慕课网</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="two">只学有用的</span><span class="three">!</span></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-5 CSS使用方法</title>
+	<link rel="stylesheet" href="css.css" type="text/css"><!--外部引入 极力推荐使用 页面加载同时加载css样式-->
+
+	<style>/*内部样式--放在head标签*/
+	<!--
+	p {
+		color: blue;
+	}
+	-->/*用于当低版本浏览器不识别<style>标签时不会讲内容显示在页面内*/
+
+	/*导入式 不建议使用 在读取完html文件之后加载*/
+	@import "css.css";
+	@import url(css.css);
+	</style>
+</head>
+<body>
+<!--
+	引用CSS样式
+		1.行内样式（内联样式） 在开始标签内添加style样式属性
+		2.内部样式表（嵌入样式）
+		3.外部样式表
+		4.导入式-->
+
+<!--行内样式 不建议大量使用-->
+<h1 style="color:red;font-size: 20px;">css使用方法</h1>
+
+<!--内部样式（嵌入样式）-->
+<p>嵌入样式</p>
+
+<!--外部样式（外联）-->
+<!--外部样式表，把css样式代码写在独立文件 扩展名csscss1.css.css-->
+<p>嵌入样式</p>
+</body>
+</html>

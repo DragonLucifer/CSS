@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-10 经典的三列布局</title>
+	<style>
+		/*
+		经典的列布局
+			1.两列布局固定
+			2.两列布局自适应
+			3.三列布局固定
+			4.三列布局自适应*/
+		* {
+			margin: 0;
+			padding: 0;
+			color: #FFFFFF;
+		}
+
+		.container1 {
+			width: 1000px;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.left1 {
+			width: 200px;
+			height: 200px;
+			background: #1a5acd;
+			float: left;
+		}
+
+		.center1 {
+			width: 600px;
+			height: 200px;
+			background: pink;
+			float: left;
+		}
+
+		.right1 {
+			width: 200px;
+			height: 200px;
+			background: blue;
+			float: left;
+		}
+
+		/*用百分比自适应*/
+		.container2 {
+			width: 80%;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.left2 {
+			width: 20%;
+			height: 200px;
+			background: #1a5acd;
+			float: left;
+		}
+
+		.center2 {
+			width: 60%;
+			height: 200px;
+			background: pink;
+			float: left;
+		}
+
+		.right2 {
+			width: 20%;
+			height: 200px;
+			background: blue;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div class="container1">
+	<div class="left1">
+		这是两列布局页面左侧
+	</div>
+	<div class="center1">
+		这是两列布局页面中间
+	</div>
+	<div class="right1">
+		这是两列布局页面右侧
+	</div>
+</div>
+<br/>
+<div class="container2">
+	<div class="left2">
+		这是两列布局页面左侧
+	</div>
+	<div class="center2">
+		这是两列布局页面中间
+	</div>
+	<div class="right2">
+		这是两列布局页面右侧
+	</div>
+</div>
+</body>
+</html>

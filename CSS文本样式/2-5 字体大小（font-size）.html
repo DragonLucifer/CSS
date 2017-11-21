@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-5 字体大小（font-size）</title>
+	<style>
+		.in {
+			font-size: 0.5in;
+		}
+
+		.cm {
+			font-size: 0.5cm;
+		}
+
+		.mm {
+			font-size: 5mm;
+		}
+
+		.pt {
+			font-size: 15pt;
+		}
+
+		.pc {
+			font-size: 2pc;
+		}
+
+		.xxSmall {
+			font-size: xx-small;
+		}
+
+		.xSmall {
+			font-size: x-small;
+		}
+
+		.small {
+			font-size: small;
+		}
+
+		.medium {
+			font-size: medium;
+		}
+
+		.large {
+			font-size: large;
+		}
+
+		.xLarge {
+			font-size: x-large;
+		}
+
+		.xxLarge {
+			font-size: xx-large;
+		}
+
+		.larger {
+			font-size: larger;
+		}
+
+		.smaller {
+			font-size: smaller;
+		}
+
+		.em {
+			font-size: 2em;
+		}
+
+		.percent {
+			font-size: 150%; /*16px *150% = = 24px*/
+		}
+
+		#fontSize {
+			font-size: 20px;
+		}
+
+		.percent {
+			font-size: 150%;
+		}
+
+		.em {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+<p>默认字体大小</p>
+<!--注意：font简写-font：italic  small-caps  bold  12px  "黑体" ;-->
+<!--绝对单位---不建议使用-->
+<p class="in">文字大小是0.5in</p>
+<p class="cm">文字大小是0.5cm</p>
+<p class="mm">文字大小是0.5mm</p>
+<p class="pt">文字大小是15pt</p>
+<p class="pc">文字大小是2pc</p>
+
+<p class="xxSmall">文字大小是xx-small</p>
+<p class="xSmall">文字大小是x-small</p>
+<p class="small">文字大小是small</p>
+<p class="medium">文字大小是medium</p>
+<p class="large">文字大小是large</p>
+<p class="xLarge">文字大小是x-large</p>
+<p class="xxLarge">文字大小是xx-large</p>
+
+<!--
+	xx-small
+	x-small
+	small
+	medium
+	large
+	x-large
+	xx-large-->
+
+<!--相对单位-->
+<p style="font-size: 50px">文字大小50px，受显示器分辨率影像</p>
+<p>文字大小<span class="larger">相对父元素的文字大小变大</span></p>
+<p>文字大小<span class="smaller">相对父元素的文字大小变小</span></p>
+<hr/>
+<div id="fontSize">
+	<p>文字大小<span class="em"><!--16px*2=32px-->相对值em</span></p>
+	<p class="percent"><!--20px*150%=30px-->文字大小<span>相对值%</span><!--继承30px--></p><!--继承父元素的计算值-->
+	<p class="percent"><!--20px*150%=30px-->文字大小<span class="percent">相对值%</span><!--继承30px*150%=45px--></p><!--
+	继承父元素的计算值-->
+</div>
+</body>
+</html>

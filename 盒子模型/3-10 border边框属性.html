@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-10 border边框属性</title>
+	<style type="text/css">
+		/*
+		边框属性
+			边框宽度 border-width
+			边框颜色 border-color
+			边框样式 border-style*/
+		/*
+		设置元素边框宽度
+			border-width:thin | medium | thick | 长度值
+
+		设置元素边框颜色
+			border-color:颜色 | transparent
+		*/
+		p {
+			width: 150px;
+			height: 100px;
+			background-color: #ececec;
+			line-height: 100px;
+			text-align: center;
+			border-width: thin;
+			border-color: red;
+			border-style: solid;
+		}
+
+		/*
+		边框属性（上下左右）
+			border-[left|right|top|bottom]-width
+			border-[left|right|top|bottom]-color
+			border-[left|right|top|bottom]-style*/
+		.one {
+			border-left-width: 10px;
+			border-color: #0099ee;
+			border-style: solid;
+		}
+
+		.two {
+			border-right-width: 10px;
+			border-color: #0099ee;
+			border-style: solid;
+		}
+
+		.three {
+			border-right-width: 10px;
+			border-right-color: red;
+			border-left-width: 10px;
+			border-left-color: yellow;
+			border-top-width: 10px;
+			border-top-color: green;
+			border-bottom-width: 10px;
+			border-bottom-color: gray;
+			border-top-style: solid;
+			border-left-style: dotted;
+			border-right-style: double;
+		}
+
+		.four{
+			border:10px solid;
+			border-top:10px red solid;
+			border-bottom:10px red solid;
+			border-left:10px red solid;
+			border-right:10px red solid;
+		}
+		/*
+		边框属性简写
+			border:[宽度] |[样式] |[颜色]
+		不同方向：
+			border-top:[宽度] |[样式] |[颜色]
+			border-left:[宽度] |[样式] |[颜色]
+			border-right:[宽度] |[样式] |[颜色]
+			border-bottom:[宽度] |[样式] |[颜色]*/
+	</style>
+</head>
+<body>
+<p>边框属性border</p>
+<p class="one">边框属性border</p>
+<p class="two">边框属性border</p>
+<p class="three">边框属性border</p>
+<p class="four">边框属性border</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-12 background</title>
+	<style>
+		/*
+		背景缩写
+			background:[background-color][background-image][background-repeat][background-attachment][background-position][]
+			各值之间用空格分割，不分先后顺序*/
+		div {
+			width: 300px;
+			height: 1500px;
+			border: 1px solid red;
+			background: url("img/html.jpg") no-repeat top fixed;
+			/*重要!!!:
+			当background-attachment为scroll时background-position的值相对于容器的位置
+			当background-attachment为fixed时background-position的值相对于整个页面的位置*/
+		}
+	</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

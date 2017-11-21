@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-10 文本样式其他属性</title>
+	<style type="text/css">
+		.one {
+			word-spacing: 10px; /*单词之间的间距*/
+		}
+
+		.two {
+			letter-spacing: 10px; /*字母（所有的HTML元素都为字母）的之间的间距*/
+		}
+
+		/*text-transform：capitalize（首字母大写） | uppercase | lowercase | none*/
+		.three {
+			text-transform: capitalize;
+		}
+
+		.four {
+			text-transform: uppercase;
+		}
+
+		.five {
+			text-transform: lowercase;
+		}
+
+		.six {
+			text-transform: none;
+		}
+
+		/*text-decoration:underline | overline | line-through | blink | none*/
+		.seven {
+			text-decoration: underline overline;
+		}
+
+		.eight {
+			text-decoration: overline;
+		}
+
+		.nine {
+			text-decoration: line-through;
+		}
+
+		.ten {
+			text-decoration: blink; /*兼容性问题*/
+		}
+
+		.eleven {
+			text-decoration: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.twelve {
+			color: red;
+			text-decoration: overline;
+		}
+
+		span { /*有效*/
+			color: blue;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<p>CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="one">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="one">CSS层 叠 样 式 表(英文全称：Cascading Style Sheets)</p><!--浏览器是根据空格识别单词的 无论是真正单词还是两个有间隔的文字都是单词-->
+<p class="two">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<hr/>
+<p class="three">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="four">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="five">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="six">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<hr/>
+<p class="seven">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="eight">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="nine">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="ten">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<p class="eleven">CSS层叠样式表(英文全称：Cascading Style Sheets)</p>
+<a href="">CSS</a>
+
+<!--注意：!!! 分别为p和span标签设置样式，若span无样式则继承p标签的样式；若span有自己的样式表则显示自己拥有的属性样式-->
+<p class="twelve">CSS层叠样式表，<!--显示为红色上划线-->
+	<span>(英文全称：Cascading Style Sheets)</span><!--显示为蓝色下划线--></p>
+</body>
+</html>

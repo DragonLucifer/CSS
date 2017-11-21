@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--
+	任务
+		1、在父元素内，所有子元素的最后添加空的子元素，用来清楚浮动。
+		2、给添加的空白的子元素添加clear：both；属性。-->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.per {
+			width: 300px;
+			height: auto;
+			border: 2px solid #aaa;
+		}
+
+		.li {
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin: 5px;
+			float: left;
+		}
+
+		.one {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+<div class="per">
+	<div class="li"></div>
+	<div class="li"></div>
+	<div class="one"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1 float基本参数的介绍</title>
+	<style>
+		/*float:left | right | none | inherit（继承浮动）*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.test {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left; /*重要：用于多个块级元素（原本换行）横向排列*/
+			margin-right: 10px;
+		}
+
+		.per {
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+			float: right;
+		}
+
+		.test1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: inherit;
+			margin-right: 10px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="test"></div>
+<div class="test"></div>
+<hr/>
+<div class="per">
+	<div class="test1"></div>
+	<div class="test1"></div>
+</div>
+<hr/>
+</body>
+</html>

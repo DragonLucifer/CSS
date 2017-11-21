@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-6 position-absolute(3)</title>
+	<style>
+		.parent {
+			position: relative;
+			width: 200px;
+			height: 150px;
+			background-color: blue;
+		}
+
+		.child {
+			position: absolute;
+			right: 0;
+			top: 0; /*lrtb设置为0,他的每个边将对齐到最近定位祖先元素的各个边（即覆盖整个父元素）*/
+			left: 0;
+			bottom: 0;
+			background-color: red;
+		}
+
+		/*设置水平居中*/
+		.child1 {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			background-color: yellow;
+		}
+
+		/*设置垂直居中*/
+		.child2 {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background-color: yellow;
+		}
+
+		/*设置水平垂直居中*/
+		.child3 {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto auto; /*上下左右*/
+			background-color: yellow;
+		}
+
+		/*position无效，回复常规流*/
+		.child4 {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			top: auto;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	<div class="child">
+
+	</div>
+</div>
+<hr/>
+<div class="parent">
+	<div class="child1"></div>
+</div>
+<hr/>
+<div class="parent">
+	<div class="child2"></div>
+</div>
+<hr/>
+<div class="parent">
+	<div class="child3"></div>
+</div>
+<hr/>
+<div class="parent">
+	<div class="child4"></div>
+</div>
+</body>
+</html>

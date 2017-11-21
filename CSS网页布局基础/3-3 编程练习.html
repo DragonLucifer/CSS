@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-1 圣杯布局</title>
+	<style>
+		/*
+		圣杯布局
+			三列布局，中间宽度自适应，两边定宽
+			中间栏要在浏览器中优先展示渲染
+			允许任意列的高度最高
+			用最简单的CSS、最少的HACK语句*/
+		* {
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+		}
+
+		body {
+			min-width: 700px;
+		}
+
+		.header {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			float: left;
+			text-align: center;
+		}
+
+		.container {
+			padding: 0 400px 0 400px;
+			height: 1000px;
+			position: relative;
+			top: 60px;
+		}
+
+		.left {
+			width: 400px;
+			height: 1000px;
+			background-color: red;
+			margin-left: -100%; /*-100%移动最左侧等价于top:-300px;*/
+			left: -400px;
+		}
+
+		.center {
+			width: 100%;
+			height: 1000px;
+			background-color: blue;
+		}
+
+		.container img {
+			position: relative;
+			top: 200px;
+			left: 200px;
+		}
+
+		.right {
+			width: 400px;
+			height: 1000px;
+			background-color: pink;
+			margin-right: -100%;
+			/*margin-left:-200px;*/
+			/*right:-200px;*/
+		}
+
+		.left, .center, .right {
+			position: relative;
+			float: left;
+			min-height: 300px;
+		}
+
+		.footer {
+			width: 100%;
+			height: 80px;
+			background-color: black;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+			font-size: 18px;
+			line-height: 80px;
+			color: white;
+		}
+
+		span {
+			padding-right: 50px;
+			cursor: pointer;
+		}
+
+		.page {
+			width: 100%;
+			height: 100px;
+			background-color: black;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999999;
+		}
+
+		.nav-left {
+			color: white;
+			float: left;
+			position: relative;
+		}
+
+		.nav-right {
+			font-size: 18px;
+			width: 550px;
+			height: 50px;
+			color: white;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -10px;
+			left: 1300px;
+		}
+
+		.left1 {
+			width: 100%;
+			height: 1000px;
+			background: #56fdff;
+			float: left;
+		}
+
+		h1 {
+			padding-left: 25px;
+			padding-top: 50px;
+			padding-bottom: 10px;
+			font-size: 30px;
+		}
+
+		.list {
+			margin-left: 25px;
+			padding-top: 20px;
+		}
+
+		.list1 {
+			width: 75px;
+			background-color: yellow;
+			display: inline;
+		}
+
+		.one {
+			padding-top: 20px;
+		}
+
+		.li-list {
+			background-color: #56fdff;
+			margin-left: 10px;
+		}
+
+		.user {
+			padding-top: 20px;
+			padding-left: 80px;
+			padding-bottom: 10px;
+		}
+
+		.pwd {
+			padding-bottom: 10px;
+			padding-left: 80px;
+		}
+
+		.button {
+			background-color: red;
+			border: none;
+			color: white;
+			text-align: center;
+			font-size: 16px;
+			margin-left: 100px;
+		}
+
+		.button1 {
+			width: 175px;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="page">
+		<div class="nav-left">
+			<img src="http://climg.mukewang.com/58c0d2d900016ce303000100.png" alt="">
+		</div>
+		<div class="nav-right">
+			<span>课程</span>
+			<span>职业路径</span>
+			<span>实战</span>
+			<span>猿问</span>
+			<span>手记</span>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<!--优先展示-->
+	<div class="center">
+		<img src="http://climg.mukewang.com/590037e00001fab706000400.jpg" alt="">
+	</div>
+	<div class="left">
+		<div class="left1">
+			<h1>课程推荐</h1>
+			<div class="list">
+				<div class="one">
+					<div class="list1">职业路径</div>
+					<span class="li-list">HTML与CSS实现动态网页</span>
+				</div>
+				<div class="one">
+					<div class="list1">职业路径</div>
+					<span class="li-list">HTML与CSS实现动态网页</span>
+				</div>
+				<div class="one">
+					<div class="list1">职业路径</div>
+					<span class="li-list">HTML与CSS实现动态网页</span>
+				</div>
+				<div class="one">
+					<div class="list1">职业路径</div>
+					<span class="li-list">HTML与CSS实现动态网页</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="login">
+			<h1>登录</h1>
+			<div class="user">
+				<input type="text" placeholder="请输入用户名">
+			</div>
+			<div class="pwd">
+				<input type="password" placeholder="请输入密码">
+			</div>
+
+			<button class="button button1">提交</button>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<span>课程</span>
+	<span>职业路径</span>
+	<span>实战</span>
+	<span>猿问</span>
+	<span>手记</span>
+</div>
+</body>
+</html>

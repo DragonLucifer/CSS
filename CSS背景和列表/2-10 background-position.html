@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-10 background-position</title>
+	<style type="text/css">
+		/*background-position:top | right | bottom | left | center | 百分比 | 值*/
+		/*
+		长度值(x,y) 第一个值水平位置、第二个值垂直位置 左上角0 0。注：只写一个参数的话第二个默认为剧中
+		百分比(x% y%) 第一个值水平位置的百分比、第二个值垂直位置的百分比 如果仅设置了一个值，另一个值为50%。注：只写一个参数的话第二个默认为剧中
+		top 顶部显示 相当于垂直方向0。注：只写一个参数的话第二个默认为剧中
+		right 右边显示 相当于水平方向100%。注：只写一个参数的话第二个默认为剧中
+		left 左边显示 相当于水平方向0。注：只写一个参数的话第二个默认为剧中
+		bottom 底部显示 相当于垂直方向100%。注：只写一个参数的话第二个默认为剧中
+		center 居中显示 相当于水平方向50% 垂直方向50%。注：只写一个参数的话第二个默认为剧中*/
+		div {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.one {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: 50px 50px;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.two {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: 10% 10%;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.three {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: top;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.four {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: right;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.five {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: left;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.six {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: bottom;
+			border: 2px solid red;
+			float: left;
+		}
+
+		.seven {
+			width: 300px;
+			height: 300px;
+			background-image: url("img/html.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			border: 2px solid red;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div></div>
+<div class="one">50px 50px</div>
+<div class="two">10% 10%</div>
+<div class="three">top</div>
+<div class="four">right</div>
+<div class="five">left</div>
+<div class="six">bottom</div>
+<div class="seven">center</div>
+<div><img src="img/position.png"></div>
+</body>
+</html>

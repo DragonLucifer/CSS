@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-13 CSS使用方法优先级</title>
+	<link href="css1.css" rel="stylesheet" type="text/css"><!--就近原则-->
+	<style>
+		@import "css.css"; /*内部样式优先级高于导入式样式*/
+		p {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<!--
+优先级
+	行内样式>内部样式>外部样式
+	说明：
+		1.链入外部样式表与内部样式表之间的优先级取决于所处位置的先后
+		2.最后定义的优先级最高（就近原则）-->
+<p style="color:red;"><b>css使用方法</b></p><!--行内样式优先级高于内部样式 行内样式优先级高于导入式样式-->
+</body>
+</html>

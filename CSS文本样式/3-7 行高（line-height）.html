@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-7 行高（line-height）</title>
+	<style type="text/css">
+		.text3 {
+			font-size: 25px;
+			text-indent: 2em;
+			/*无论字体为何大小，行高（固定）永远都是25px；若想行高与字体大小按照比例显示可以使用em或者%*/
+			line-height: 25px; /*当行高小于字体大小时出现重叠现象*/
+		}
+
+		.text4 {
+			font-size: 25px;
+			text-indent: 2em;
+			line-height: 1.5em; /*当行高小于字体大小时出现重叠现象*/ /*16px==1em==100%*/
+		}
+
+		.content {
+			font-size: 20px;
+			line-height: 1.3em; /*重要!!!:继承的是计算后的值，不是直接把em或者%的值继承过来*/
+			/*20px*1.3=26px*/
+		}
+
+		.text6 {
+			font-size: 30px; /*30px>26px 字体大小大于行高---重叠*/
+		}
+	</style>
+</head>
+<body>
+<h1>HTML,CSS与JavaScript之间的联系与区别</h1>
+<div>
+	<p class="text1">网页必备技术，<span>结构：HTML</span>，<span>样式：CSS</span>，<span>动作：JavaScript</span></p>
+	<p class="text2">HTML 是用来描述网页的一种超文本标记语言 ，是一套标记符号或者代码集，它们标识了网页的结构元素，如段落，标题和列表，以及超链接等。
+		因此，HTML主要用来描述网页结构。除此之外还可以用HTML在网页上放置多媒体或对表单进行描述。</p>
+	<p class="text3">CSS它是一种用来表现HTML等文件的计算机语言，可以将排版样式（字号，字体），颜色和页面布局指令应用于网页。</p>
+	<p class="text4">JavaScript是作为一种嵌入HTML文档的，动态的，基于对象的脚本语言。可以控制HTML中的元素，可以添加，删除，修改等。为网页浏览效果服务。</p>
+</div>
+<div class="content">
+	<p class="text5">网页必备技术，<span>结构：HTML</span>，<span>样式：CSS</span>，<span>动作：JavaScript</span></p>
+	<p class="text6">HTML 是用来描述网页的一种超文本标记语言 ，是一套标记符号或者代码集，它们标识了网页的结构元素，如段落，标题和列表，以及超链接等。
+		因此，HTML主要用来描述网页结构。除此之外还可以用HTML在网页上放置多媒体或对表单进行描述。</p>
+	<p class="text7">CSS它是一种用来表现HTML等文件的计算机语言，可以将排版样式（字号，字体），颜色和页面布局指令应用于网页。</p>
+	<p class="text8">JavaScript是作为一种嵌入HTML文档的，动态的，基于对象的脚本语言。可以控制HTML中的元素，可以添加，删除，修改等。为网页浏览效果服务。</p>
+</div>
+</body>
+</html>

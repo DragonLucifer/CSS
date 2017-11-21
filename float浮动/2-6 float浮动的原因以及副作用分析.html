@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-6 float浮动的原因以及副作用分析</title>
+	<style>
+		/*css中的定位机制：标准流；定位；浮动*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.per {
+			width: 500px;
+			height: auto;
+			border: 1px solid #000;
+		}
+
+		.test {
+			width: 80px;
+			height: 30px;
+			background-color: white;
+			border: 1px solid #FFF;
+			float: left; /*由于脱离普通流 父元素塌陷，没有高度div高度变为0*/
+		}
+
+		.bro { /*网页中的临近元素出现异位*/
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+<div class="per">
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+</div>
+<div class="bro">
+
+</div>
+</body>
+</html>
